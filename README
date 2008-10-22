@@ -1,0 +1,32 @@
+* |\      /|  -----  |\   |  -----  -----   /----\   |----\  *
+* | \    / |    |    | \  |    |      |    /      \  |    /  *
+* |  \  /  |    |    |  \ |    |      |    \      /  |---/   *
+* |   \/   |  -----  |   \|  -----    |     \----/   |       *
+                    version   0.1   ALPHA
+
+So, basically, MiniTop is a home page. But not just any homepage, it's an /extendable/ homepage.
+What does that mean, exactly? Well, I'll show you an example MiniPart.
+    Consider the following ZIP file:
+      example.part
+       |-- description.yml
+       |-- part.mab
+       |-- res/
+           |-- icon.png
+
+description.yml is a YAML map. An example would be:
+    ---
+    name: Example App
+That's all you need.
+
+part.mab is a template, where the actual interface/code goes for your app. Example:
+    strong "This is an example."
+    br
+And so on... For more info visit http://code.whytheluckystiff.net/markaby/
+
+res/icon.png is your icon. It must be 24x24 or it will be resized.
+
+* Running the MiniTop
+Run:
+  $ camping minitop.rb
+Then go to http://localhost:3301/
+
