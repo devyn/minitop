@@ -1,5 +1,6 @@
 <% @links.each do |lnk| %>
-    <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a><br/>
+    <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a>
+    <small><a href="<%= url_for :action => 'remove', :id => lnk.id %>" class="minitop-link-action">remove</a></small><br/>
 <% end %><br/>
 <form action="<%= url_for :action => 'add' %>" method="POST">
     <span class="minitop-caption">Name:</span>&nbsp;<input type="text" name="name"/>

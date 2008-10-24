@@ -7,4 +7,8 @@ class MainController < ApplicationController
         Link.create(:name => params[:name], :url => params[:url])
         redirect_to :action => 'index'
     end
+    def remove
+        Link.destroy(params[:id])
+        redirect_to :action => 'index'
+    end
 end

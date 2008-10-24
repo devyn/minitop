@@ -19,3 +19,7 @@ a.minitop-link:hover {
     font-family: Arial, sans-serif;
 }
 
+a.minitop-link-action, a.minitop-link-action:visited {
+    color: blue;
+}
+
