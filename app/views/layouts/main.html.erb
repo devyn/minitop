@@ -6,8 +6,6 @@
     <body>
         <h1 class="minitop-title">MiniTop</h1>
         <br/><hr/><br/>
-        <% @links.each do |lnk| %>
-            <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a><br/>
-        <% end %>
+        <%= yield %>
     </body>
 </html>
