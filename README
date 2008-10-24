@@ -10,8 +10,6 @@ What does that mean, exactly? Well, I'll show you an example MiniPart.
       example.part
        |-- description.yml
        |-- part.erb
-       |-- res/
-           |-- icon.png
 
 description.yml is a YAML map. An example would be:
     ---
@@ -20,8 +18,6 @@ That's all you need.
 
 part.erb is a template, where the actual interface/code goes for your app. Example:
     <strong><%= "This is an example.".upcase %></strong><br/>
-
-res/icon.png is your icon. It must be 24x24 or it will be resized.
 
 * Running the MiniTop
 Run:

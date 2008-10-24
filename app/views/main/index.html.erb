@@ -1,3 +1,8 @@
 <% @links.each do |lnk| %>
     <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a><br/>
 <% end %>
+<form action="<%= url_for :action => 'add' %>" method="POST">
+    <span class="minitop-caption">Name:</span>&nbsp;<input type="text" name="name"/>
+    <span class="minitop-caption">URL:</span>&nbsp;<input type="text" name="url"/>
+    <input type="submit" value="Add link"/>
+</form>
