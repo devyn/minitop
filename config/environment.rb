@@ -43,14 +43,14 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names. Uncomment to use default local time.
   config.time_zone = 'UTC'
 
-  # Your secret key for verifying cookie session data integrity.
-  # If you change this key, all old sessions will become invalid!
-  # Make sure the secret is at least 30 characters and all random, 
-  # no regular words or you'll be exposed to dictionary attacks.
-  config.action_controller.session = {
-    :session_key => '_minitop_session',
-    :secret      => '9fa5365494b886bec90f4300013dcd69c637589fbd890d9bde938424feeb9fafa2c7903fa9586589b862841e86aa5d5df6b091b9b9d5f84c19463cdf7abb8c52'
-  }
+  ## Your secret key for verifying cookie session data integrity.
+  ## If you change this key, all old sessions will become invalid!
+  ## Make sure the secret is at least 30 characters and all random, 
+  ## no regular words or you'll be exposed to dictionary attacks.
+  # config.action_controller.session = {
+  #  :session_key => '_minitop_session',
+  #  :secret      => '9fa5365494b886bec90f4300013dcd69c637589fbd890d9bde938424feeb9fafa2c7903fa9586589b862841e86aa5d5df6b091b9b9d5f84c19463cdf7abb8c52'
+  #}
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

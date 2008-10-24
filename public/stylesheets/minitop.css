@@ -1,1 +1,21 @@
+body {
+    color: cyan;
+    background-color: #994400;
+    font-family: Verdana, sans-serif;
+}
+
+h1.minitop-title {
+    color: lime;
+    font-family: Arial, sans-serif;
+}
+
+a.minitop-link, a.minitop-link:visited {
+    color: steelblue;
+    font-family: Arial, sans-serif;
+}
+
+a.minitop-link:hover {
+    color: cyan;
+    font-family: Arial, sans-serif;
+}
 
