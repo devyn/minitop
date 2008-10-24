@@ -4,10 +4,9 @@ body {
     font-family: Verdana, sans-serif;
 }
 
-a.minitop-title, a.minitop-title:hover {
+h1.minitop-title {
     color: lime;
     font-family: Arial, sans-serif;
-    text-decoration: none;
 }
 
 a.minitop-link, a.minitop-link:visited {
@@ -22,13 +21,5 @@ a.minitop-link:hover {
 
 a.minitop-link-action, a.minitop-link-action:visited {
     color: blue;
-}
-
-a.minitop-link-part, a.minitop-link-part:visited {
-    color: #0D0;
-}
-
-a.minitop-link-part:hover {
-    color: #0F0;
 }
 

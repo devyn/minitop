@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-require 'rubygems'
-require File.dirname(__FILE__) + '/../config/boot'
-require 'yaml'
-require 'activerecord'
-require File.join(RAILS_ROOT, *%w(app models part.rb))
-Part.establish_connection YAML.load(File.read(File.join(RAILS_ROOT, *%w(config database.yml))))['development']
-ARGV.each {|i| Part.destroy i.to_i}
-
