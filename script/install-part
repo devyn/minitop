@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require File.dirname(__FILE__) + '/../config/boot'
+require 'zip/zip'
+require 'zip/zipfilesystem'
+require 'yaml'
+require 'activerecord'
+require File.join(RAILS_ROOT, *%w(app models part.rb))
+zip = Zip::ZipFile.open(ARGV[0])
+name = YAML.load(zip.file.read("description.yml"))['name']
+template = zip.file.read("part.erb")
+zip.close
+Part.establish_connection YAML.load(File.read(File.join(RAILS_ROOT, *%w(config database.yml))))['development']
+Part.create(:name => name, :template => template)
+
