@@ -19,3 +19,9 @@ module MiniTop::Models
     end
 end
 
+module MiniTop::Controllers
+end
+
+module MiniTop::Views
+end
+
