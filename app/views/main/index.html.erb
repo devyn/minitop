@@ -1,3 +1,6 @@
+<% @parts.each do |pt| %>
+    <a href="<%= url_for :action => 'part', :id => pt.id %>" class="minitop-link-part"><%= h pt.name %></a><br/>
+<% end %>
 <% @links.each do |lnk| %>
     <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a>
     <small><a href="<%= url_for :action => 'remove', :id => lnk.id %>" class="minitop-link-action">remove</a></small><br/>
