@@ -2,7 +2,7 @@
 * | \    / |    |    | \  |    |      |    /      \  |    /  *
 * |  \  /  |    |    |  \ |    |      |    \      /  |---/   *
 * |   \/   |  -----  |   \|  -----    |     \----/   |       *
-                        version   1.0
+                    version   0.1   ALPHA
 
 So, basically, MiniTop is a home page. But not just any homepage, it's an /extendable/ homepage.
 What does that mean, exactly? Well, I'll show you an example MiniPart.
