@@ -5,6 +5,7 @@
     <a href="<%= lnk.url %>" class="minitop-link"><%= h lnk.name %></a>
     <small><a href="<%= url_for :action => 'remove', :id => lnk.id %>" class="minitop-link-action">remove</a></small><br/>
 <% end %><br/>
+<hr/>
 <form action="<%= url_for :action => 'add' %>" method="POST">
     <span class="minitop-caption">Name:</span>&nbsp;<input type="text" name="name"/>
     <span class="minitop-caption">URL:</span>&nbsp;<input type="text" name="url"/>
