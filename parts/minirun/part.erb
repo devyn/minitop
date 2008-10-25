@@ -1,0 +1,15 @@
+
+
+<!-- MiniRun, the unsafe command runner. -->
+<% if params[:run] %>
+    <div style="font-style: italic; color: white">result for <span style="font-family: monospace; font-weight: bold; font-style: none"><%= h params[:run] %></div>
+    <div style="font-family: monospace; color: yellow"><%= h(`#{params[:run]}`).gsub("\n", "<br/>").gsub(" ", "&nbsp;").gsub("\t", "&nbsp;"*4) %></div>
+    <a class="minitop-link-action" href="<%= url_for :action=> 'part', :id => params[:id] %>">back</a>
+<% else %>
+    <form action="<%= url_for :action => 'part', :id => params[:id] %>" method="post">
+        <span style="color: yellow; font-family: monospace">$&nbsp;</span>
+        <input type="text" name="run"/>
+        <input type="submit" value="run"/>
+    </form>
+<% end %>
+
