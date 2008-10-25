@@ -1,10 +1,11 @@
 <!-- MinIRB, the interactive ruby prompt for MiniTop -->
 <% if params[:eval] %>
     <span style="font-family: monospace; color: white">=&gt;&nbsp;<%= h Thread.start{$SAFE=4;eval(params[:eval])}.value.inspect %></span>
+    <a class="minitop-link-action" href="<%= url_for :action=> 'part', :id => params[:id] %>">back</a>
 <% else %>
     <form action="<%= url_for :action => 'part', :id => params[:id] %>" method="post">
         <span style="font-family: monospace; color: white">&gt;&gt;</span>
         <input type="text" style="font-family: monospace" name="eval"/>
-        <input type="submit" value="Evaluate"/>
+        <input type="submit" value="run"/>
     </form>
 <% end %>
