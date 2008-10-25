@@ -11,5 +11,6 @@ name = YAML.load(zip.file.read("description.yml"))['name']
 template = zip.file.read("part.erb")
 zip.close
 Part.establish_connection YAML.load(File.read(File.join(RAILS_ROOT, *%w(config database.yml))))['development']
-Part.create(:name => name, :template => template)
+pt = Part.create(:name => name, :template => template)
+puts "Part added with ID=#{pt.id}"
 
