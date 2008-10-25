@@ -27,7 +27,9 @@ part.erb is a template, where the actual interface/code goes for your app. Examp
 Running the MiniTop
 -------------------
 Run:
+
     $ rake db:migrate
     $ script/server
+
 Then go to http://localhost:3000/
 
