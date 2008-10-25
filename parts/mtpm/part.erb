@@ -1,0 +1,34 @@
+<% require 'coderay' %>
+<!--
+                |\    /| ----- |----\  |\    /| |
+                | \  / |   |   |----/  | \  / | |
+                |  \/  |   |   |       |  \/  | .
+                ***   MiniTop Part Manager    ***
+            Warning! This _might_ allow people to add
+     malicious code to your MiniTop if don't have a firewall...
+-->
+<% if params[:view_src] %>
+<% part = Part.find(params[:view_src]) %>
+<div style="font-weight: bold; color: white">Source for <span style="color: cyan"><%= h part.name %></span>:</div>
+<div style="background-color: #DDD; color: black"><%= CodeRay.highlight part.template, :rhtml, :css => :style %></div>
+<% else %>
+<%
+    if params[:add]
+        Part.create :name => params[:add], :template => params[:add_template]
+    elsif params[:remove]
+        Part.destroy params[:remove]
+    end
+    Part.find(:all).each do |part|
+%>
+<span style="font-family: monospace; color: white"><%= h part.name %></span>
+<a class="minitop-link-action" href="<%= url_for :action => 'part', :id => params[:id], :remove => part.id %>">remove</a>
+<a class="minitop-link-action" href="<%= url_for :action => 'part', :id => params[:id], :view_src => part.id %>">view source</a>
+<br/>
+<% end %>
+<hr/>
+<form>
+<div style="color:white;font-weight:bold">Add a part</div>
+<div><span style="color:cyan">Name:</span> <input type="text" name="add"/></div>
+<div><span style="color:cyan">Template:</span><br/><textarea style="width: 100%; height: 25%" name="add_template"></textarea></div>
+<input type="submit" value="add"/>
+<% end %>
